@@ -1,8 +1,9 @@
-let a =100
+let arr =[343,56,2,9,45,24]
+console.log(arr.sort((a,b)=> a-b))
 
-for(let i =0; i<=a;i++){
-    if(i%2 == 1){
+// console.log(arr.reverse())
 
-        console.log(i)
-    }
-}removeEventListener
+
+
+console.log(Math.min(23,46,2,46,67))
+console.log(Math.max(23,46,2,46,67))
