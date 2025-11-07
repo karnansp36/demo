@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <caption>table 1.1</caption>
+        <colgroup>
+            <col span="2" style="background-color: lightgray">
+            <col span="2" style="background-color: lightblue">
+            <col span="2" style="background-color: lightgreen">
+        
+        </colgroup>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th colspan="2">Salary</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>john@gmail.com</td>
+            <td>50000</td>
+            <td rowspan="3">yes</td>
+        </tr>
+          <tr>
+            <td>2</td>
+            <td>peter</td>
+            <td colspan="2">peter@gmail.com</td>
+            
+        </tr>
+         <tr>
+            <td>2</td>
+            <td>peter</td>
+            <td>peter@gmail.com</td>
+            <td>50000</td>
+        </tr>
+    </table>
+
+
+
+
+</body>
+</html>
