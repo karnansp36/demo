@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 5px;
+        }
+       
+        .container:hover{
+            background-color: yellow;
+            color: red;
+
+        }
+        .box:first-child{
+            color: white;
+        }
+        .box:last-child{
+            color: red;
+        }
+        .box:nth-child(1){
+            color: orange;
+        }
+        div:first-of-type{
+            background-color: red;
+        }
+        /* .container div:last-of-type{
+            background-color: green;
+        } */
+        div:nth-of-type(2){
+            background-color: orange;
+        }
+        div:nth-last-of-type(2){
+            background-color: yellow;
+        }
+        /* .container span:only-child{
+            background-color: red;
+        } */
+        .container span:only-of-type{
+            background-color: orange;
+            color: white;
+        }
+        .container .box:not(span){
+            background-color: pink;
+        }
+        .box-5:empty{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>sdf</div>
+   <div class="container">
+        <div class="box">container 1</div>
+        <div class="box">container 2</div>
+        <div class="box" >container 3</div>
+   </div>
+   <div class="container">
+        <span class="box">container 1</span>
+        <div class="box">container 2</div>
+        <span class="box">container 1</span>
+
+    </div>
+    <div class="box-5" ></div>
+</body>
+</html>

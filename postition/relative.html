@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+    position  : static
+                fixed
+                sticky
+                relative
+    
+    
+    */
+      .container {
+        width: 300px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        top: 100px;
+        left:100px;
+        border-radius: 0 20px 20px ;
+        padding: 20px;
+      }
+      .child{
+         width: 0;
+        height: 0;
+        background-color: transparent;    
+        position: absolute;
+        left: -29px;
+        top: 0;
+        border-bottom: 20px solid transparent;
+        border-right: 30px solid red;
+      }
+      .box {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: rgb(148, 200, 249)" class="box"></div>
+
+    <div style="background-color: rgb(242, 238, 211)" class="box">
+     
+      <div class="container">
+        <div class="child">
+        </div>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, quos neque, aliquid molestias debitis ad quisquam facere, soluta consectetur deserunt a voluptatum dolores repellendus inventore perferendis quam eos illo ea?
+
+      </div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fuga, optio fugit commodi labore delectus adipisci tempore earum quasi exercitationem, laboriosam repellat eaque impedit voluptatem odit quis beatae. Totam, laudantium?
+    </div>
+    <div style="background-color: rgb(148, 200, 249)" class="box"></div>
+  </body>
+</html>
