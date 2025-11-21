@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: relative;
+      }
+      .container::before {
+        content: "first content";
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        z-index: 100;
+      }
+      .container::after {
+        content: "after content";
+        background-color: rgb(128, 87, 0);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 70px;
+        z-index: 100;
+      }
+      span {
+        background-color: orange;
+        width: 300px;
+        height: 300px;
+      }
+      .box::first-line{
+        color: red;
+        font-size: 20px;
+      }
+      .box::first-letter{
+        font-size: 50px;
+        color: blue;
+        float: right;
+      }
+      .box{
+        background-color:#ffff00;
+        overflow: auto;
+      }
+      img{
+        float: right;
+        margin-right:10px ;
+        width: 100px;
+      }
+      p{
+        clear: both;
+      }
+      .box::selection{
+        background-color: red;
+        color: white;
+        font-size: 30px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <span>inline element</span>
+    <div class="container">This is container</div>
+    <div class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/34/Cars_2006.jpg" alt="">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero minima
+      libero odit labore eaque distinctio error porro dolore, molestiae iste.
+      Sequi, quibusdam 
+    </div>
+    <p>deserunt adipisci repellat eius distinctio dignissimos
+      tempora reiciendis?libero odit labore eaque distinctio error porro dolore, molestiae iste.
+      Sequi, quibusdam deserunt adipisci repellat eius distinctio dignissimos
+      tempora reiciendis?</p>
+
+
+      
+  </body>
+</html>
