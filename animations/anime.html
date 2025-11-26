@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: rgb(188, 243, 255);
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            animation: moving 5s ease-in-out 2s infinite alternate-reverse forwards ;
+
+            animation-name: moving ;
+            animation-duration:4s ;
+            animation-timing-function: ease-in ;
+            animation-delay: 2s;
+            animation-iteration-count:3 ;
+            animation-direction: alternate;
+            animation-fill-mode:backwards ;
+          
+        }
+        @keyframes moving{
+            0%{
+                top: 0;
+                left: 0;
+                  transform: rotate(0deg);
+            }
+            
+            25%{
+                 top: 0;
+                left: 80%;
+                background-color: blue;
+                  transform: rotate(40deg); 
+            }
+            50%{
+                top: 80%;
+                left: 80%;
+                background-color: green;
+                  transform: rotateX(360deg) translateX(300px);
+                  
+            }
+            75%{
+                top: 80%;
+                left: 0;
+                background-color: orange;
+                  transform: rotateY(360deg);
+           
+            }
+            100%{
+                top: 0;
+                left: 0;
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            this is container
+        </div>
+    </div>
+</body>
+</html>

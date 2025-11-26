@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 40%;
+        height: 400px;
+        background-color: red;
+      }
+      .box2{
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+      }
+      .box{
+        background-color: red;
+        margin: 5px;
+      }
+
+      @media only screen and (min-width: 1200px) {
+        .container {
+          width: 70%;
+          background-color: green;
+        }
+        .box2 {
+          width: 300px;
+          height: 200px;
+          background-color: orange;
+        }
+      }
+       @media only screen and (max-width: 900px) {
+        .container {
+          background-color: rgb(2, 27, 255);
+          width: 100%;
+        }
+         .box2{
+            grid-template-columns: auto auto;
+            height: 200px;
+            background-color: rgb(255, 0, 0);
+        }
+      }
+      @media only screen and (max-width: 700px) {
+        .container {
+          background-color: rgb(2, 27, 255);
+          width: 100%;
+        }
+         .box2{
+            grid-template-columns: auto auto;
+            height: 200px;
+            background-color: rgb(255, 0, 0);
+        }
+      }
+      @media only screen and  (max-width: 500px) {
+        .container {
+          background-color: rgb(255, 221, 2);
+          width: 100%;
+          display: none;
+        }
+        .box2{
+            grid-template-columns: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">box</div>
+    <div class="box2">
+        <div class="box box-1">box-1</div>
+        <div class="box box-2">box-2</div>
+        <div class="box box-3">box-3</div>
+        <div class="box box-4">box-4</div>
+        <div class="box box-5">box-5</div>
+        <div class="box box-6">box-6</div>
+    </div>
+  </body>
+</html>
