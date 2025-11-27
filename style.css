@@ -1,3 +1,102 @@
-h3{
-    background-color: green;
+:root{
+    --primary-color:rgb(204, 235, 251);
+}
+
+/* navbar design */
+.nav-wrapper{
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 1px rgb(235, 234, 234);
+    /* background-color: red; */
+    /* display: flex;
+    justify-content: center; */
+}
+.nav-container{
+    width: 80%;
+    height: 100%;
+    /* background-color: blue; */
+    margin: 0 auto;
+    display: flex;
+}
+.logo-container{
+    /* background-color: orange; */
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 150px;
+    height: 60px;
+    object-fit: contain;
+}
+.search-container{
+    /* background-color: rgb(13, 255, 0); */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-container{
+    width: 70%;
+    height: 30px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+.btn-container select{
+    border: none;
+    width: 20%;
+    background-color: var(--primary-color);
+}
+.btn-container input{
+    background-color: var(--primary-color);
+    border: none;
+    padding-left: 10px;
+    /* text-align: center; */
+}
+.btn-container button{
+    background-color: var(--primary-color);
+    border: none;
+}
+.nav-link-container{
+    /* background-color: rgb(255, 255, 255); */
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* hero section design */
+.hero-wrapper{
+    width: 100%;
+    height:65vh ;
+    background-color: red;
+}
+.hero-container{
+    width: 80% ;
+    height: 100%;
+    background-color: blue;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.hero-box1{
+    background-color: orange;
+    flex-grow: 1;
+    flex-basis: 30%;
+}
+.hero-box2{
+    background-color: rgb(13, 255, 4);
+    flex-grow: 1;
+}
+.hero-box3{
+    background-color: rgb(230, 0, 255);
+    flex-grow: 1;
+}
+.side-box{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }
