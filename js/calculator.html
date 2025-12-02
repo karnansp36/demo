@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="username">
+    <div id="container"></div>
+    <button onclick="display()">click here</button>
+    <script>
+        let username = document.getElementById('username')
+        let container = document.getElementById('container')
+
+        function display(){
+            container.innerHTML = username.value
+        }
+    </script> -->
+
+
+
+     <input type="number" id="num1">
+     <input type="number" id="num2">
+    <div id="container"></div>
+    <button onclick="add()">click here</button>
+    <script>
+        
+        function add(){
+            let num1 = Number(document.getElementById('num1').value)
+            let num2 = Number(document.getElementById('num2').value)
+    
+            let container = document.getElementById('container')
+            console.log(num1 + num2)
+            container.innerHTML = num1 + num2
+        }
+    </script>
+
+
+
+
+</body>
+</html>

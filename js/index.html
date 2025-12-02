@@ -5,18 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #container{
-            
-        }
-        .inline{
-            
-        }
+       
+       
     </style>
 </head>
 <body>
     <div id="container">This is container</div>
-    <span class="inline">element</span>
+   <button id="btn" onclick="toggle()">toggle</button>
+   <!-- <script src="day-2.js"></script> -->
+    <script>
+        function toggle(){
+            let container =  document.getElementById('container')
+            let btn = document.getElementById('btn')
 
-   <div>container</div>
+            if(container.style.backgroundColor == 'white' || container.style.backgroundColor =='' ){
+                container.style.backgroundColor ='black'
+                container.style.color ='white'
+                btn.innerHTML = "Dark"
+
+            }else{
+                 container.style.backgroundColor ='white'
+                container.style.color ='black'
+                 btn.innerHTML = "Light"
+            }
+
+        }
+        
+    </script>
 </body>
 </html>
