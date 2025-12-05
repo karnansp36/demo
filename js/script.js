@@ -112,3 +112,6 @@ function add(){
 add()
 
 console.log(c)
+let a ='     Hello world     '
+
+console.log(a.trim())
