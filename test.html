@@ -1,12 +1,132 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        position: relative;
+        overflow: hidden;
+        background-color: yellow;
+      }
+      #box {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="box"></div>
+    </div>
+    <button onclick="leftMove()" id="left-btn">left</button>
+    <button onclick="rightMove()" id="right-btn">right</button>
+    <script>
+      const box = document.getElementById("box");
+
+      let postion = 0;
+      let leftInterval = null;
+
+      let rightInterval = null;
+
+      function leftMove() {
+        clearInterval(rightInterval);
+        leftInterval = setInterval(leftinnerMove, 50);
+        function leftinnerMove() {
+          if (postion > 0) {
+            postion -= 10;
+            box.style.left = postion + "px";
+          } else {
+            clearInterval(leftInterval);
+          }
+        }
+      }
+      function rightMove() {
+        clearInterval(leftInterval);
+        rightInterval = setInterval(rightinnerMove, 50);
+        function rightinnerMove() {
+          if (postion < 450) {
+            postion += 10;
+            box.style.left = postion + "px";
+          } else {
+            clearInterval(rightInterval);
+          }
+        }
+      }
+    </script>
+  </body>
+</html> -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <input type="text">
-    <input type="text"><input type="text"><input type="text">
-</body>
+    <style>
+      #container {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        position: relative;
+        overflow: hidden;
+        background-color: yellow;
+      }
+      #box {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>    
+    <div id="container">
+      <div id="box"></div>
+    </div>
+    <button onclick="leftMove()" id="left-btn">left</button>
+    <button onclick="rightMove()" id="right-btn">right</button>
+    <script>
+      const box = document.getElementById("box");
+
+      let postion = 0;
+      let leftInterval = null;
+
+      let rightInterval = null;
+
+      function leftMove() {
+       
+          if (postion > 0) {
+            postion -= 10;
+            box.style.left = postion + "px";
+            box.style.top = postion + "px";
+
+          } else {
+            clearInterval(leftInterval);
+          }
+        }
+      
+      function rightMove() {
+       
+          if (postion < 450) {
+            postion += 10;
+            box.style.left = postion + "px";
+            box.style.top = postion + "px";
+
+          } else {
+            clearInterval(rightInterval);
+          }
+        }
+      
+    </script>
+  </body>
 </html>
