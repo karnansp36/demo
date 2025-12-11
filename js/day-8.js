@@ -103,28 +103,41 @@
 
 
 
-let person1 ={name:'john', age:20}
-let person2 ={name:'john', age:20}
-let person3 ={name:'john', age:20}
+// let person1 ={name:'john', age:20}
+// let person2 ={name:'john', age:20}
+// let person3 ={name:'john', age:20}
 
 
-class Person{
-    constructor(name, age){
-        this.name = name
-        this.age = age
-    }
+// class Person{
+//     constructor(name, age){
+//         this.name = name
+//         this.age = age
+//     }
 
-    fullname(){
-        return this.name + ' ' + this.age
-    }
+//     fullname(){
+//         return this.name + ' ' + this.age
+//     }
 
-    info(){
-        return `name is ${this.name} and age is ${this.age}`
-    }
+//     info(){
+//         return `name is ${this.name} and age is ${this.age}`
+//     }
 
+// }
+
+// let p1 = new Person('john', 20)
+// let p2 = new Person('peter', 30)
+// console.log(p1)
+// console.log(p2.info())
+
+
+
+function add(a, b){
+    return a+b
+}
+function sum(){
+    console.log('inside sum function')
 }
 
-let p1 = new Person('john', 20)
-let p2 = new Person('peter', 30)
-console.log(p1)
-console.log(p2.info())
+console.log('start ')
+setTimeout(sum, 3000)
+console.log('end ')

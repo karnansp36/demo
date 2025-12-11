@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="sub1">
+    <input type="number" name="" id="sub2">
+
+    <input type="number" name="" id="sub3">
+    <button onclick="calculate()">calculate</button>
+    <table>
+        <tr>
+            <th>Total</th>
+            <th>Average</th>
+            <th>Max</th>
+            <th>Min</th>
+            <!-- <th>Grade</th> -->
+        </tr>
+        <tr>
+            <td id="total"></td>
+            <td id="average"></td>
+            <td id="max"></td>
+            <td id="min"></td>
+            <!-- <td id="grade"></td> -->
+        </tr>
+    </table>
+
+    <script>
+        
+        function calculate(){
+            let sub1= Number(document.getElementById("sub1").value);
+            let sub2= Number(document.getElementById("sub2").value);
+            let sub3= Number(document.getElementById("sub3").value);
+
+            let total= sub1 + sub2 + sub3;
+            let average= total/3;
+            let max = Math.max(sub1, sub2, sub3);
+            let min = Math.min(sub1, sub2, sub3);
+            let mark =[sub1, sub2, sub3];
+            document.getElementById("total").innerText= total;
+            document.getElementById("average").innerText= average;
+            document.getElementById("max").innerText= max;
+            document.getElementById("min").innerText= min;
+
+
+            for(let x of mark){
+                if(x>=90){
+                    console.log(x + " A+");
+                }else if(x>=80){
+                    console.log(x + " A");
+                }else if(x>=70){
+                    console.log(x + " B+");
+                }else if(x>=60){
+                    console.log(x + " B");
+                }else if(x>=50){
+                    console.log(x + " C+");
+                }else if(x>=40){
+                    console.log(x + " C");
+                }else{
+                    console.log(x + " F");
+                }
+            }
+
+
+        }
+    </script>
+
+
+
+</body>
+</html>
