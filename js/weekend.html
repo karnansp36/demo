@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #container{
-            background-color: red;
-        }
+   
         #box{
             border: 2px solid orange;
             width: 30px;
@@ -18,30 +16,51 @@
         body{
             cursor:none;
         }
+        .dark{
+            background-color: black;
+            color: white;
+            height: 300px;
+        }
+        .box{
+            display: none;
+        }
     </style>
 </head>
 <body>
 
-        <div  id="container">This is container
+        <div  id="container" class="dark">This is container
+    <button onclick="change(event)" >close</button>
+
         </div>
         <div id="box"></div>
 
-    <button onmouseover="change(event)" >click here</button>
+    <button onclick="change2()">pop button</button>
 
    <script>
         let box = document.querySelector('#container')
         let childbox = document.getElementById('box')
         function change(e){
             console.log(e)
+            box.classList.add("box")
+            box.classList.toggle('dark')
+
+
         }
+        function change2(e){
+      
+            box.classList.remove("box")
+
+        }
+
 
         document.addEventListener('mousemove', (e)=>{
             // e.preventDefault()  
             childbox.style.left = e.clientX + 'px'
             childbox.style.top = e.clientY + 'px'
 
-            console.log(e.clientX, e.clientY)
+            // console.log(e.clientX, e.clientY)
         })
+
 
     
    

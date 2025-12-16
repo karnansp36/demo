@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        This is container
+    </div>
+    <!-- <button id="btn" draggable="true" ondrag="display(event)">Click here</button> -->
+    <button id="btn"  >Click here</button>
+
+    <script>
+        let container = document.getElementById('container')
+        let btn = document.getElementById('btn')
+        function display(e){
+            e.preventDefault()
+            if(e.key == 'Enter'){
+                container.style.color = 'red'
+                console.log('enter is pressed')
+            }
+            else if(e.key == 'ḍ'&& e.shiftKey && e.altKey && e.ctrlKey){
+                container.style.color = 'blue'
+
+                console.log('d is clicked')
+            }
+        }
+        document.addEventListener('keydown', display)
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -95,23 +95,56 @@
 
 
 //const  --  block scope, cannot reassign and cannot redaclare
-const c =20
+// const c =20
 
 
-console.log(c)
-{
+// console.log(c)
+// {
 
    
-   console.log(c)
-}
-console.log(c)
-function add(){
-   const c =100
-   console.log(c)
-}
-add()
+//    console.log(c)
+// }
+// console.log(c)
+// function add(){
+//    const c =100
+//    console.log(c)
+// }
+// add()
 
-console.log(c)
-let a ='     Hello world     '
+// console.log(c)
+// let a ='     Hello world     '
 
-console.log(a.trim())
+// console.log(a.trim())
+
+
+
+
+
+class Person{
+   constructor(name, salary, age){
+      this.name = name
+      this.salary = salary
+      this.age =age
+   }
+
+   getFullname(){
+      return `${this.name} getting the salary of ${this.salary}`
+   }
+}
+
+class Child extends Person {
+   display(){
+      return this.name + " " +this.age
+   }
+}
+class Child2 extends Child {
+   display2(){
+      return this.name + " " +this.age
+   }
+}
+
+let p1 = new Child('john', 20000, 30)
+let p2 = new Child2('peter', 30000, 30)
+
+console.log(p1.getFullname())
+console.log(p2.display())

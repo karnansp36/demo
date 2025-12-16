@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="container">This is container</div> -->
+    <!-- <div class="box">box-1
+        <span >blue</span>
+    </div>
+    <span>next</span>
+    <div class="box">box-2</div>
+    <div class="box">box-3</div>
+    <div class="box">box-4</div>
+    <div class="box">box-5</div> -->
+
+    <div id="container">This is container
+        <div id="content">this is child</div>
+    </div>
+    <button onclick="display()">click here</button>
+<div></div>
+  <script>
+ document.write('hello js')
+        function display(){
+            let container =document.getElementById('container')
+            let child = document.getElementById('content')
+            let element1 =document.createElement('div')
+            element1.className = 'box'
+            element1.innerHTML = 'This is js content'
+
+            // container.appendChild(element1)
+            // container.append(element1)
+            // container.removeChild(child)
+            // container.replaceChild(element1, child)
+
+           
+
+
+
+
+
+
+
+            //changing html elements
+            // //1
+            // container.innerHTML ='hello from js'
+            // //2
+            // container.className ='box'
+            // container.title ='This is box'
+            // //3
+            // container.setAttribute('class','box-2')
+            // //4
+            // container.style.backgroundColor= 'green'
+           
+
+
+
+
+        }
+
+
+
+
+    // let box = document.getElementById("container")
+    // let container = document.getElementsByClassName('box')
+    // let container = document.getElementsByTagName('div')
+    // let container = document.querySelector('.box')
+    // let container2 = document.querySelectorAll('.box')
+
+    // // container.innerHTML = 'query selector updated'
+    // for(let x of container){
+    //      x.innerHTML = 'js updated'
+    //      x.style.backgroundColor ='red'
+    // }
+   
+  </script>
+    
+</body>
+</html>
