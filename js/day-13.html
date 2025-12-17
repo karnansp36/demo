@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form>
+        <input type="text" id="username" placeholder="username">
+        <input type="email" id="email" placeholder="email">
+        <input type="password" id="password" placeholder="password">
+        <button type="button"  onclick="formSubmit()">Submit</button>
+   </form>
+    <button onclick="display()">get data</button>
+    <div id="container"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+        let container = document.getElementById("container")
+       async function formSubmit(){
+             let username = document.getElementById('username').value
+            let email = document.getElementById('email').value
+            let password = document.getElementById('password').value
+
+            try {
+                await axios.post("http://localhost:3000/users", {username, email, password})
+                console.log('successfully data stored')
+            } catch (error) {
+                console.log(error)
+            }
+
+            
+
+
+        }
+
+        async function display() {
+            let response = await axios.get("http://localhost:3000/users")
+            console.log(response)
+            console.log(response.data)
+            let users = response.data
+
+            users.map((value, index)=>{
+                container.innerHTML += `<h1>${value.username}</h1>
+                                        <div>${value.email}</div>
+                                        <div>${value.id}</div>
+                                        <button onclick="updateData('${value.id}')" >update</button>
+                                        <button onclick="deleteData('${value.id}')" >delete</button>
+                                        `
+            })
+
+        }
+
+        async function updateData(id) {
+             let username = document.getElementById('username').value
+            let email = document.getElementById('email').value
+            let password = document.getElementById('password').value
+
+            await axios.patch(`http://localhost:3000/users/${id}`, {username, email, password})
+            
+        }
+
+        async function deleteData(id) {
+            await axios.delete(`http://localhost:3000/users/${id}`)
+        }
+       
+
+    </script>
+</body>
+</html>

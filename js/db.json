@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "a693",
+      "username": "karnan_sp_36963",
+      "email": "review@gmail.com",
+      "password": "12"
+    }
+  ],
+  "products": [
+    {
+      "id": "4a79",
+      "username": "car",
+      "email": "ironman@gmail.com",
+      "password": "ironman@123"
+    }
+  ]
+}
