@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Storage Example</title>
+</head>
+<body>
+  <h2>Storage Demo</h2>
+
+  <button onclick="setLocal()">Set LocalStorage</button>
+  <button onclick="getLocal()">Get LocalStorage</button>
+    <button onclick="clearLocal()">Clear LocalStorage Item</button>
+    <button onclick="clearAllLocal()">Clear All LocalStorage</button>
+  <p id="localOutput"></p>
+
+  <button onclick="setSession()">Set SessionStorage</button>
+  <button onclick="getSession()">Get SessionStorage</button>
+    <button onclick="clearSession()">Clear SessionStorage Item</button>
+    <button onclick="clearAllSession()">Clear All SessionStorage</button>
+  <p id="sessionOutput"></p>
+
+  <button onclick="setCookie()">Set Cookie</button>
+  <button onclick="getCookie()">Get Cookie</button>
+  <button onclick="clearCookie()">clear</button>
+  <p id="cookieOutput"></p>
+
+  <script>
+
+
+//  Local storage         ||   we cannot access this storage from backend directly 
+//  session storage       || 
+//  cookies        -  can access directly from backend.  store for customized time period
+
+
+    // --- LocalStorage ---
+    function setLocal() {
+      localStorage.setItem("name", "john@gmail.com");
+      alert("LocalStorage: name=John Doe");
+    }
+    function getLocal() {
+      let value = localStorage.getItem("email");
+      document.getElementById("localOutput").innerText = "LocalStorage value: " + value;
+    }
+    function clearLocal() {
+      localStorage.removeItem("name");
+      alert("LocalStorage: name cleared");
+    }
+    function clearAllLocal() {
+      localStorage.clear();
+      alert("LocalStorage: all items cleared");
+    }
+
+    // --- SessionStorage ---
+    function setSession() {
+      sessionStorage.setItem("sessionId", "ABC123");
+      alert("SessionStorage: sessionId=ABC123");
+    }
+    function getSession() {
+      let date = new Date();
+      console.log(date.getDay())
+      let a = sessionStorage.getItem("sessionId");
+      document.getElementById("sessionOutput").innerText = date.getMinutes()+ a;
+    }
+    function clearSession() {
+      sessionStorage.removeItem("sessionId");
+      alert("SessionStorage: sessionId cleared");
+    }
+    function clearAllSession() {
+      sessionStorage.clear();
+      alert("SessionStorage: all items cleared");
+    }
+
+    // --- Cookies ---
+    function setCookie() {
+      document.cookie = "user=JaneDoe; path=/; max-age=3600"; // expires in 1 hour
+      alert("Cookie set: user=JaneDoe");
+    }
+    function getCookie() {
+      let a = document.cookie
+      console.log(a)
+      let value = document.cookie
+        .split("; ")
+        .find(row => row.startsWith("user="))
+        ?.split("=")[1];
+      document.getElementById("cookieOutput").innerText = "Cookie value: " + value;
+    }
+    function clearCookie() {
+      document.cookie = "user=; path=/; max-age=0"; // delete cookie
+      alert("Cookie cleared");
+    }
+    let date = new Date()
+    console.log(date.getFullYear())
+  </script>
+</body>
+</html>

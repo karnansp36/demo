@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">SimpleBlog</a></h1>
+                <p class="tagline">Thoughts, stories, and ideas</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#recent">Recent Posts</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to SimpleBlog</h2>
+            <p>A clean, minimal blog platform built with HTML, CSS, and JavaScript</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <!-- Featured Post -->
+        <section class="featured-post" id="featured">
+            <h2 class="section-title">Featured Article</h2>
+            <div class="featured-content" id="featured-article">
+                <!-- Featured article will be loaded here by JavaScript -->
+                <div class="loading">Loading featured article...</div>
+            </div>
+        </section>
+
+        <!-- Recent Posts -->
+        <section class="recent-posts" id="recent">
+            <h2 class="section-title">Recent Posts</h2>
+            <div class="posts-grid" id="posts-container">
+                <!-- Posts will be loaded here by JavaScript -->
+                <div class="loading">Loading posts...</div>
+            </div>
+            <div class="view-all">
+                <button id="load-more" class="btn">Load More Posts</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 SimpleBlog. All rights reserved.</p>
+            <p>Built with HTML, CSS, and JavaScript</p>
+            <p>Data stored with JSON Server</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

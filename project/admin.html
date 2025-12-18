@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Simple Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">SimpleBlog</a></h1>
+                <p class="tagline">Admin Panel</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#posts-list">Manage Posts</a></li>
+                    <li><a href="#create-post">Create New</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admin Main Content -->
+    <main class="container admin-container">
+        <h2 class="admin-title">Blog Admin Panel</h2>
+        
+        <!-- Create/Edit Post Form -->
+        <section class="admin-form-section" id="create-post">
+            <h3><i class="fas fa-edit"></i> Create/Edit Post</h3>
+            <form id="post-form" class="post-form">
+                <input type="hidden" id="post-id">
+                
+                <div class="form-group">
+                    <label for="title">Post Title *</label>
+                    <input type="text" id="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="author">Author *</label>
+                    <input type="text" id="author" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" placeholder="e.g., Technology, Lifestyle, Travel">
+                </div>
+                
+                <div class="form-group">
+                    <label for="image">Featured Image URL</label>
+                    <input type="text" id="image" placeholder="https://example.com/image.jpg">
+                </div>
+                
+                <div class="form-group">
+                    <label for="excerpt">Short Excerpt *</label>
+                    <textarea id="excerpt" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="content">Content *</label>
+                    <textarea id="content" rows="10" required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn" class="btn btn-primary">Publish Post</button>
+                    <button type="button" id="reset-btn" class="btn btn-secondary">Clear Form</button>
+                    <button type="button" id="preview-btn" class="btn">Preview Post</button>
+                </div>
+            </form>
+        </section>
+        <div id="preview_container"></div>
+        <!-- Existing Posts -->
+        <section class="admin-posts-section" id="posts-list">
+            <h3><i class="fas fa-list"></i> Existing Posts</h3>
+            <div class="posts-list" id="admin-posts-container">
+                <!-- Posts will be loaded here by JavaScript -->
+                <div class="loading">Loading posts...</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 SimpleBlog. All rights reserved.</p>
+            <p>Admin Panel - Built with HTML, CSS, and JavaScript</p>
+        </div>
+    </footer>
+<script type="text/javascript" src="https://unpkg.com/toaster-js/umd.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/toaster-js/default.css"/>
+    <script  src="admin.js"></script>
+</body>
+</html>
