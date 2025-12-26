@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+
+        <input type="text" name="" id="username" placeholder="Enter the user name">
+        <input type="email" name="" id="email" placeholder="Enter the email">
+        <input type="password" name="" id="password" placeholder="Enter the password">
+        <button type="button" onclick="formSubmit()">Submit</button>
+    </form>
+    <button onclick="getData()">get data</button>
+    <div id="container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+       async function formSubmit(){
+            let username = document.getElementById('username').value
+            let email = document.getElementById('email').value
+            let password = document.getElementById("password").value
+
+            await axios.post("http://localhost:3000/users", {username, email, password})
+
+        }
+
+        async function getData(){
+            let container = document.getElementById("container")
+            let response =await axios.get("http://localhost:3000/users")
+           let users =response.data
+
+           users.map((value, index)=>{
+                container.innerHTML += `<h1> ${value.username} </h1>
+                    <p>${value.email}</p>
+                    <div>${value.password}</div>
+                    <button onclick="updataData('${value.id}')">update</button>
+                    <button onclick="deleteData('${value.id}')">delete</button>
+
+                `
+           })
+
+        }
+
+        async function updataData(id){
+            let username = document.getElementById('username').value
+            let email = document.getElementById('email').value
+            let password = document.getElementById("password").value
+
+            axios.patch(`http://localhost:3000/users/${id}`,{username, email, password})
+        }
+
+          async function deleteData(id){
+          
+            axios.delete(`http://localhost:3000/users/${id}`)
+        }
+  
+
+    </script>
+
+</body>
+</html>
