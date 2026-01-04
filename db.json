@@ -1,24 +1,11 @@
-
-
 {
   "users": [
     {
-      "username": "john",
-
-      "email": "john@gmail.com",
-      "password": 45
-    },
-    {
-      "id": "ab3a",
-      "username": "peter",
+      "id": "304d",
+      "username": "karnan",
       "email": "review@gmail.com",
-      "password": "review@gmail.com"
+      "password": "123"
     }
   ],
-  "post": [
-    {
-      "title": "javascript tutorial",
-      "desc": "popular language"
-    }
-  ]
+  "post": []
 }
