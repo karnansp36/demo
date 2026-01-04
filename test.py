@@ -1,2 +1,2 @@
 def good():
-    print('hello, good afternoon')
+    print('hello, good evening')
